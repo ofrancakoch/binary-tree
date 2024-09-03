@@ -73,7 +73,7 @@ Tree *insertNode(Tree *node, int val) {
 
 
 void showTree(Tree *node, int tabCount) {
-  if (node != NULL) {
+  if (node) {
     tabFormat(tabCount);
     printf("|%d \n", node->value);
     showTree(node->RightNode, tabCount + 1);
@@ -83,7 +83,7 @@ void showTree(Tree *node, int tabCount) {
 
 
 void preOrder(Tree *node) {
-  if (node != NULL) {
+  if (node) {
     printf("|%d ", node->value);
     preOrder(node->LeftNode);
     preOrder(node->RightNode);
@@ -91,7 +91,7 @@ void preOrder(Tree *node) {
 }
 
 void inOrder(Tree *node) {
-  if (node != NULL) {
+  if (node) {
     inOrder(node->LeftNode);
     printf("|%d ", node->value);
     inOrder(node->RightNode);
@@ -99,7 +99,7 @@ void inOrder(Tree *node) {
 }
 
 void postOrder(Tree *node) {
-  if (node != NULL) {
+  if (node) {
     postOrder(node->LeftNode);
     postOrder(node->RightNode);
     printf("|%d ", node->value);
